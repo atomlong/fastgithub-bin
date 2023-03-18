@@ -6,7 +6,6 @@ pkgbase = fastgithub-bin
 	install = fastgithub-bin.install
 	arch = x86_64
 	license = MIT
-	depends = mono
 	provides = fastgithub
 	options = !strip
 	source = https://ghproxy.com/https://github.com/dotnetcore/FastGithub/releases/download/2.1.4/fastgithub_win-x64.zip
