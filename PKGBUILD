@@ -33,6 +33,7 @@ sha256sums=('b439afc7b730766aed894876696e9aeb411e3b45f60ebdcfdff247890742c0f6')
 
 prepare() {
 [[ "${CHOST}" =~ "-msys" ]] && export MSYS="winsymlinks:lnk"
+return 0
 }
 
 package() {
