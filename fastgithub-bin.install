@@ -1,4 +1,7 @@
 post_install() {
+    [ -h /usr/bin/fastgithub ] || {
+    MSYS="winsymlinks:lnk" ln -sf "/opt/fastgithub-bin/fastgithub" /usr/bin/fastgithub
+    }
     echo -e "run as service:\n sudo fastgithub start" 
 }
 
