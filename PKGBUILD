@@ -19,16 +19,16 @@ arch+=('aarch64')
 depends=('mono')
 [ "$CARCH" = 'x86_64' ] && _arch='linux-x64'
 [ "$CARCH" = 'aarch64' ] && _arch='linux-arm64'
-source_x86_64=("${_url}/releases/download/${pkgver}/${_pkgName}_${_arch}.zip")
+source_x86_64=("${_url}/releases/download/${pkgver}/${_pkgName}_linux-x64.zip")
 sha256sums_x86_64=('01106995885a907c5832c594880f79763e6074877e20d61c391b3e9912a3b038')
-source_aarch64=("${_url}/releases/download/${pkgver}/${_pkgName}_${_arch}.zip")
+source_aarch64=("${_url}/releases/download/${pkgver}/${_pkgName}_linux-arm64.zip")
 sha256sums_aarch64=('88a54e4c4c3d945f6bb7449804afd0dda3a4c18ef43cc1e8895b38c53484c2a1')
 }
 
 [[ "${CHOST}" =~ "-msys" ]] && {
 [ "$CARCH" = 'x86_64' ] && _arch='win-x64'
-source=("${_url}/releases/download/${pkgver}/${_pkgName}_${_arch}.zip")
-sha256sums=('b439afc7b730766aed894876696e9aeb411e3b45f60ebdcfdff247890742c0f6')
+source_x86_64=("${_url}/releases/download/${pkgver}/${_pkgName}_win-x64.zip")
+sha256sums_x86_64=('b439afc7b730766aed894876696e9aeb411e3b45f60ebdcfdff247890742c0f6')
 }
 
 source+=("${_pkgName}.service")
